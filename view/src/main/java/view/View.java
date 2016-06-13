@@ -2,6 +2,7 @@ package view;
 
 import java.awt.event.KeyEvent;
 
+import javax.imageio.ImageIO;
 import javax.swing.SwingUtilities;
 
 import contract.ControllerOrder;

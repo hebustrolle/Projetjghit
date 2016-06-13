@@ -17,7 +17,7 @@ public abstract class Main {
 	 * @param args
 	 *          the arguments
 	 */
-	//rehr(hd-
+
 	public static void main(final String[] args) {
 		final Model model = new Model();
 		final View view = new View(model);

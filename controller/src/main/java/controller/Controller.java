@@ -78,6 +78,9 @@ public class Controller implements IController {
 			case Indonesia:
 				this.model.loadMessage("ID");
 				break;
+			case cinque:
+				this.model.loadMessage("ci");
+				break;
 
 			default:
 				break;

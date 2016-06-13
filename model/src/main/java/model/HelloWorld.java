@@ -31,7 +31,7 @@ class HelloWorld extends Entity {
 		this.setKey(key);
 		this.setMessage(message);
 		Selec Selection;
-		Selection = new Selec();
+		Selection = new Selec(message);
 		
 	}
 

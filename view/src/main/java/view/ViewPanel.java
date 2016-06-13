@@ -6,9 +6,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
-
+import model.Model;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+
 
 /**
  * The Class ViewPanel.
@@ -79,5 +80,6 @@ class ViewPanel extends JPanel implements Observer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 50);
 	}
 }

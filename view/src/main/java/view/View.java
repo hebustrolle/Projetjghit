@@ -1,10 +1,7 @@
 package view;
 
 import java.awt.event.KeyEvent;
-
-import javax.imageio.ImageIO;
 import javax.swing.SwingUtilities;
-
 import contract.ControllerOrder;
 import contract.IController;
 import contract.IModel;
@@ -36,6 +33,7 @@ public class View implements IView, Runnable {
 	 *
 	 * @param keyCode
 	 *          the key code
+	 * @param image 
 	 * @return the controller order
 	 */
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
@@ -54,6 +52,8 @@ public class View implements IView, Runnable {
 				return ControllerOrder.English;
 		}
 	}
+
+	
 
 	/*
 	 * (non-Javadoc)

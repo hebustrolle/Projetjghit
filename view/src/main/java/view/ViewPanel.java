@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
-import model.Model;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
@@ -22,6 +21,7 @@ class ViewPanel extends JPanel implements Observer {
 	private ViewFrame					viewFrame;
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -998294702363713521L;
+	public int i = 2;
 
 	/**
 	 * Instantiates a new view panel.
@@ -74,11 +74,13 @@ class ViewPanel extends JPanel implements Observer {
 		graphics.fillRect(0, 0, this.getWidth(), this.getHeight());
 		graphics.setColor(Color.red);
 		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 20);
+		graphics.drawString(this.getViewFrame().getModel().GetChar(),10,50);
 		try {
 			graphics.drawImage(ImageIO.read(new File("sprite/lorann_l.png")), 0, 0, this.getViewFrame());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 }

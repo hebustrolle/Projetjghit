@@ -1,5 +1,6 @@
 package model;
 
+//import java.nio.channels.SelectionKey;
 import java.sql.SQLException;
 import java.util.Observable;
 
@@ -64,5 +65,11 @@ public class Model extends Observable implements IModel {
 	 */
 	public Observable getObservable() {
 		return this;
+	}
+	
+	public String GetChar()
+	{
+		String mot = "CESI ?";
+		return mot;
 	}
 }

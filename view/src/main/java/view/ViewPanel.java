@@ -9,6 +9,8 @@ import java.util.Observer;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
+import model.SpriteSelec;
+
 
 /**
  * The Class ViewPanel.
@@ -76,7 +78,8 @@ class ViewPanel extends JPanel implements Observer {
 		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 20);
 		graphics.drawString(this.getViewFrame().getModel().GetChar(),10,50);
 		try {
-			graphics.drawImage(ImageIO.read(new File("sprite/lorann_l.png")), 0, 0, this.getViewFrame());
+			SpriteSelec objet= new SpriteSelec("b");
+			graphics.drawImage(ImageIO.read(new File(objet.getimage())), 0, 0, this.getViewFrame());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

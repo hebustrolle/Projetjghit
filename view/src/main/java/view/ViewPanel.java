@@ -80,6 +80,5 @@ class ViewPanel extends JPanel implements Observer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 50);
 	}
 }

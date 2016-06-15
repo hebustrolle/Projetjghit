@@ -7,8 +7,7 @@ import aedt.showboard.ISquare;
 
 public abstract class Element implements ISquare {
 	private Sprite				sprite;
-	private Permeability	permeability;
-	private int		World;
+	protected static Permeability	permeability;
 
 	public Element(final Sprite sprite, final Permeability permeability) {
 		this.setSprite(sprite);
@@ -29,14 +28,6 @@ public abstract class Element implements ISquare {
 
 	private void setPermeability(final Permeability permeability) {
 		this.permeability = permeability;
-	}
-
-	public World getWorld() {
-		return this.World;
-	}
-
-	public void setWorld(final World World) {
-		this.World = World;
 	}
 	public Image getImage() {
 		return this.getSprite().getImage();

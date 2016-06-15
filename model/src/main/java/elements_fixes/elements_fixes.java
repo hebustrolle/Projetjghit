@@ -7,7 +7,7 @@ public abstract class elements_fixes {
 	public static final Gate_closed		Gate_closed			= new Gate_closed();
 	public static final Gate_open		Gate_open			= new Gate_open();
 	public static final Purse			Purse				= new Purse();
-	public static final Crystal_ball	Crystal_ball		= new Crystal_ball();
+	public static final Crystall_ball	Crystal_ball		= new Crystall_ball();
 
 	private static element_fixe			elements_fixes[]	= { Bone, Horizontal_bone, Vertical_bone, Gate_closed, Gate_open, Purse, Crystal_ball };
 
@@ -17,5 +17,6 @@ public abstract class elements_fixes {
 				return element_fixe;
 			}
 		}
+		return null;
 	}
 }

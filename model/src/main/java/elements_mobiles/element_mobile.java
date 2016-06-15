@@ -5,8 +5,10 @@ import element.Element;
 import element.Permeability;
 import element.Sprite;
 
-public abstract class element_mobile extends Element implements IPawn {
+public abstract class element_mobile extends Element {
 	private final Point position;
+	protected int x;
+	protected int y;
 
 	public element_mobile(Sprite sprite) {
 		super(sprite, Permeability.BLOCKING);
@@ -22,8 +24,16 @@ public abstract class element_mobile extends Element implements IPawn {
 		return this.position;
 	}
 	
-	private boolean isMovePossible(final int x, final int y) {
-		return (this.getWorld().getElement(x, y).getPermeability() != Permeability.BLOCKING);
+	public void setX(int x) {
+		this.position.x=x;
+	}
+	public void setY(int y) {
+		this.position.y=y;
+	}
+	
+	private boolean isMovePossible(int x, int y) {
+		boolean YorN = true;
+		return YorN;
 	}
 	
 	public void moveUp() {

@@ -27,6 +27,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="sprite"/>
+	<classpathentry kind="lib" path="images"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

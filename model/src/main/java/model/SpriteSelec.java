@@ -15,7 +15,6 @@ public SpriteSelec(String ch[])
 /*		imagepath="sprite/lorann_l.png";
 		break;	
 	case "O":
-	
 		imagepath="sprite/crystal_ball.png";
 		break;
 	case "X":

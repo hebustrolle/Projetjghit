@@ -1,4 +1,4 @@
-package model;
+/*package model;
 
 import java.io.File;
 
@@ -6,13 +6,13 @@ import javax.imageio.ImageIO;
 
 public class SpriteSelec {
 	private String imagepath;
-public SpriteSelec(String ch)
+public SpriteSelec(String ch[])
 {
-	switch(ch)
+	switch(ch[])
 	{
 	case "U": 
 	/*	graphics.drawImage(ImageIO.read(new File("sprite/lorann_l.png")), 0, 0, this.getViewFrame());*/
-		imagepath="sprite/lorann_l.png";
+/*		imagepath="sprite/lorann_l.png";
 		break;	
 	case "O":
 	
@@ -51,3 +51,5 @@ public String getimage()
 	return imagepath;
 }
 }
+
+*/

@@ -1,5 +1,7 @@
 package contract;
 
+import java.awt.Image;
+import java.io.IOException;
 import java.util.Observable;
 
 /**
@@ -32,4 +34,5 @@ public interface IModel {
 	Observable getObservable();
 	
 	String GetChar();
+	Image sld(int cpt) throws IOException;
 }

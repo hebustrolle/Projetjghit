@@ -1,10 +1,16 @@
 package model;
 
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 //import java.nio.channels.SelectionKey;
 import java.sql.SQLException;
 import java.util.Observable;
 
+import javax.imageio.ImageIO;
+
 import contract.IModel;
+
 
 /**
  * The Class Model.
@@ -15,6 +21,9 @@ public class Model extends Observable implements IModel {
 
 	/** The message. */
 	private String message;
+	 private Image img;
+	 
+	 char[] ch;
 
 	/**
 	 * Instantiates a new model.
@@ -70,6 +79,77 @@ public class Model extends Observable implements IModel {
 	public String GetChar()
 	{
 		String mot = "CESI ?";
+		//split = new StrToChar(message);
 		return mot;
+		
+		
+	}
+	
+	public Image sld(int cpt) throws IOException
+	{
+		ch = message.toCharArray(); 
+		
+
+		switch(ch[cpt])
+		{
+		case 'U': 
+			 img = ImageIO.read(new File("sprite/lorann_l.png"));
+	  
+			break;	
+		case 'O':
+			img = ImageIO.read(new File("sprite/crystal_ball.png"));
+			
+			break;
+		case 'X':
+			img = ImageIO.read(new File("sprite/gate_closed.png"));
+			
+		case '|':
+			img = ImageIO.read(new File("sprite/vertical_bone.png"));
+			
+			break;
+		case '-':
+			 img = ImageIO.read(new File("sprite/horizontal_bone.png"));
+			
+			break;
+		case 'c':
+			img = ImageIO.read(new File("sprite/bone.png"));
+			
+			break;
+		case 'E':
+			img = ImageIO.read(new File("sprite/monster_1.png"));
+			
+			break;
+		case 'e':
+			img = ImageIO.read(new File("sprite/monster_2.png"));
+			
+			break;
+		case 'B':
+			img = ImageIO.read(new File("sprite/monster_3.png"));
+			
+			break;
+		case 'b':
+			img = ImageIO.read(new File("sprite/monster_4.png"));
+			
+			break;
+		case '$':
+			img = ImageIO.read(new File("sprite/purse.png"));
+			
+			break;
+		case ':':
+			img = ImageIO.read(new File("sprite/noimage.jpg"));
+			
+			break;
+		default :
+			img = ImageIO.read(new File("sprite/noimage.jpg"));
+			break;
+		
+		}
+		
+		//Image img = ImageIO.read(new File("sprite/lorann_l.png"));
+		
+		
+		
+		return img ;
+		
 	}
 }

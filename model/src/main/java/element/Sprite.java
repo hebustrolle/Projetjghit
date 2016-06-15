@@ -10,8 +10,7 @@ import javax.imageio.ImageIO;
 public class Sprite extends StringWriter {
 	private Image image;
 
-	public Sprite(final String c, final String image) {
-		this.write(c);
+	public Sprite(final String image) {
 		try {
 			this.image = ImageIO.read(new File("images/" + image));
 		} catch (final IOException e) {
@@ -19,8 +18,8 @@ public class Sprite extends StringWriter {
 		}
 	}
 
-	public Sprite(final String c) {
-		this(c, "images/noimage.png");
+	public Sprite() {
+		this("images/noimage.png");
 	}
 
 	public Image getImage() {

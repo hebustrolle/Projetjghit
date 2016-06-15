@@ -20,10 +20,10 @@ import contract.IModel;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
-	private String message;
+	private String message ="";
 	 private Image img;
 	 
-	 char[] ch;
+	 char[] ch = null;
 
 	/**
 	 * Instantiates a new model.
@@ -79,6 +79,7 @@ public class Model extends Observable implements IModel {
 	public String GetChar()
 	{
 		String mot = "CESI ?";
+		ch = message.toCharArray();
 		//split = new StrToChar(message);
 		return mot;
 		
@@ -87,8 +88,10 @@ public class Model extends Observable implements IModel {
 	
 	public Image sld(int cpt) throws IOException
 	{
-		ch = message.toCharArray(); 
-		
+		//ch = message.toCharArray(); 
+		for(int i = 0; i<240;i++){
+			System.out.println("Char : " + ch[i]);
+		}
 
 		switch(ch[cpt])
 		{
@@ -100,9 +103,9 @@ public class Model extends Observable implements IModel {
 			img = ImageIO.read(new File("sprite/crystal_ball.png"));
 			
 			break;
-		case 'X':
+		case 'M':
 			img = ImageIO.read(new File("sprite/gate_closed.png"));
-			
+			break;
 		case '|':
 			img = ImageIO.read(new File("sprite/vertical_bone.png"));
 			

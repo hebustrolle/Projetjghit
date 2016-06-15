@@ -24,7 +24,7 @@ class ViewPanel extends JPanel implements Observer {
 	/** The Constant serialVersionUID. */
 	private static final long	serialVersionUID	= -998294702363713521L;
 	public int i = 2;
-	private int cpt = 0;
+	public int cpt = 0;
 
 	/**
 	 * Instantiates a new view panel.
@@ -72,27 +72,31 @@ class ViewPanel extends JPanel implements Observer {
 	 */
 	@Override
 	protected void paintComponent(final Graphics graphics) {
+		cpt=0;
 		graphics.setColor(Color.BLACK);
 		graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
 		graphics.fillRect(0, 0, this.getWidth(), this.getHeight());
 		graphics.setColor(Color.red);
 		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 20);
 		graphics.drawString(this.getViewFrame().getModel().GetChar(),10,50);
-		/*for(int x = 0; x <= 20; x++)
+		for(int y = 0; y < 12; y++)
 		{
-			for(int y = 0; y <= 12; y++)
-			{*/
-				cpt++;
+			for(int x = 0; x < 20; x++)
+			{
+				
 				try {
-					graphics.drawImage(getViewFrame().getModel().sld(cpt), x*64, y*64, this.getViewFrame());
+					
+				graphics.drawImage(getViewFrame().getModel().sld(cpt), x*64, y*64, 64, 64, this.getViewFrame());
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				//}
-			//}
+				
+				}cpt++;
+				
+			}}
 		}
-		cpt=0;
+	
 		
 		
 	}
-}
+//}

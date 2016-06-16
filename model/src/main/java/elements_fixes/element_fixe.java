@@ -4,7 +4,7 @@ import element.Element;
 import element.Permeability;
 import element.Sprite;
 
-abstract class element_fixe extends Element {
+ public abstract class element_fixe extends Element {
 	private final char fileSymbol;
 
 	public element_fixe(Sprite sprite, Permeability penetrable, char fileSymbol2) {

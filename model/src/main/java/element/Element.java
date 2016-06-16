@@ -3,9 +3,9 @@ package element;
 import java.awt.Image;
 
 import javax.swing.text.View;
-import aedt.showboard.ISquare;
 
-public abstract class Element implements ISquare {
+
+public abstract class Element  {
 	private Sprite				sprite;
 	private Permeability	permeability;
 	private int		World;

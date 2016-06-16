@@ -97,51 +97,52 @@ public class Model extends Observable implements IModel {
 		{
 		case 'U': 
 			 img = ImageIO.read(new File("sprite/lorann_l.png"));
-	  
-			break;	
+			 break;
+			
 		case 'O':
 			img = ImageIO.read(new File("sprite/crystal_ball.png"));
-			
 			break;
+			
 		case 'M':
 			img = ImageIO.read(new File("sprite/gate_closed.png"));
 			break;
+			
 		case '|':
 			img = ImageIO.read(new File("sprite/vertical_bone.png"));
-			
 			break;
+			
 		case '-':
 			 img = ImageIO.read(new File("sprite/horizontal_bone.png"));
 			
 			break;
 		case 'c':
 			img = ImageIO.read(new File("sprite/bone.png"));
-			
 			break;
+			
 		case 'E':
 			img = ImageIO.read(new File("sprite/monster_1.png"));
-			
 			break;
+			
 		case 'e':
-			img = ImageIO.read(new File("sprite/monster_2.png"));
-			
+			img = ImageIO.read(new File("sprite/monster_2.png"));			
 			break;
+			
 		case 'B':
-			img = ImageIO.read(new File("sprite/monster_3.png"));
-			
+			img = ImageIO.read(new File("sprite/monster_3.png"));			
 			break;
+			
 		case 'b':
-			img = ImageIO.read(new File("sprite/monster_4.png"));
-			
+			img = ImageIO.read(new File("sprite/monster_4.png"));			
 			break;
+			
 		case '$':
-			img = ImageIO.read(new File("sprite/purse.png"));
-			
+			img = ImageIO.read(new File("sprite/purse.png"));			
 			break;
+			
 		case ':':
-			img = ImageIO.read(new File("sprite/noimage.jpg"));
-			
+			img = ImageIO.read(new File("sprite/noimage.jpg"));			
 			break;
+			
 		default :
 			img = ImageIO.read(new File("sprite/noimage.jpg"));
 			break;

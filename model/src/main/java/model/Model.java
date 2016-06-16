@@ -22,6 +22,7 @@ public class Model extends Observable implements IModel {
 	/** The message. */
 	private String message ="";
 	 private Image img;
+	 public Lorann lorann;
 	 
 	 char[] ch = null;
 
@@ -97,6 +98,7 @@ public class Model extends Observable implements IModel {
 		{
 		case 'U': 
 			 img = ImageIO.read(new File("sprite/lorann_l.png"));
+			 lorann = new Lorann();
 			 break;
 			
 		case 'O':

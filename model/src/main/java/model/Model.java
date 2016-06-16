@@ -91,6 +91,7 @@ public class Model extends Observable implements IModel {
 		//ch = message.toCharArray(); 
 		for(int i = 0; i<240;i++){
 			System.out.println("Char : " + ch[i]);
+			System.out.println("cpt : " + cpt);
 		}
 
 		switch(ch[cpt])

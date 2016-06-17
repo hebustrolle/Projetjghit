@@ -2,12 +2,15 @@ package view;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+
+import model.Sprite;
 
 
 
@@ -81,37 +84,34 @@ class ViewPanel extends JPanel implements Observer {
 		graphics.drawString(this.getViewFrame().getModel().getMessage(), 10, 20);
 		graphics.drawString(this.getViewFrame().getModel().GetChar(),10,50);
 	
-		for(int y = 0; y < 12; y++)
-		{
-			for(int x = 0; x < 20; x++)
-			{
+		
+		
+		//this.viewFrame.getModel().getImage(1);
 				
+		
+		
+			
+		Image image = this.viewFrame.getModel().getImage(1);
+		int x = this.viewFrame.getModel().getX(1);
+		int y = this.viewFrame.getModel().getY(1);
+		graphics.drawImage(image,x*64,y*64, this.getViewFrame());//(image,x*64,y*64, 64, 64, this.getViewFrame());
+		this.viewFrame.getModel().setX(x+64);		
+		this.repaint();
+				//cpt++;
 				
-				
-				try {
-					
-				
-				graphics.drawImage(getViewFrame().getModel().sld(cpt),x*64+z,y*64, 64, 64, this.getViewFrame());
-				} catch (IOException e) {
-					
-					e.printStackTrace();
-				
-				}cpt++;
-				
-				
-			}}
-		try {
-			Thread.sleep(5);
+		
+			
+		/*try {
+			Thread.sleep(500);
 			
 			
 			
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-			}if (z>=1280)
-			{z=0;}
-		this.repaint();z=z+64;
+			*/
+		
 	
 		}
-		
 	}
+	

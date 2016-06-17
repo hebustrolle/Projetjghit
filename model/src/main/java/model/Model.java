@@ -20,8 +20,13 @@ import contract.IModel;
 public class Model extends Observable implements IModel {
 
 	/** The message. */
-	private String message ="";
+	 private String message ="";
 	 private Image img;
+	 private int cpt;
+	 Sprite sprite[] = new Sprite[64];
+	 private int i=0;
+	 private int x=0;
+	 private int y=0;
 	 
 	 char[] ch = null;
 
@@ -80,28 +85,64 @@ public class Model extends Observable implements IModel {
 	{
 		String mot = "CESI ?";
 		ch = message.toCharArray();
+		
+		try {
+			sld();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	/*	try {
+			img = ImageIO.read(new File("sprite/crystal_ball.png"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		int x=1;
+		int y=1;
+		sprite[0]= new Sprite(img, x, y);
+*/
+		
+		
+			
+		
+		
+		
 		//split = new StrToChar(message);
-		return mot;
-		
-		
+		return mot;	
 	}
 	
-	public Image sld(int cpt) throws IOException
-	{
+	public void sld() throws IOException
+	{	cpt=0;
 		//ch = message.toCharArray(); 
-		for(int i = 0; i<240;i++){
-			System.out.println("Char : " + ch[i]);
-			System.out.println("cpt : " + cpt);
-		}
-
-		switch(ch[cpt])
+		
+			
+		
+		/*for(int y = 0; y < 12; y++)
+		{
+			for(int x = 0; x < 20; x++)
+			{*/
+			
+				cpt++;
+			
+		switch('O'/*ch[cpt]*/)
 		{
 		case 'U': 
 			 img = ImageIO.read(new File("sprite/lorann_l.png"));
+			 
 			 break;
 			
 		case 'O':
 			img = ImageIO.read(new File("sprite/crystal_ball.png"));
+			/*if (sprite)
+			{
+				break;
+			}*/
+			
+			System.out.println("Ecozue");
+			sprite[0]= new Sprite(img, x, y);
+			i++;
 			break;
 			
 		case 'M':
@@ -154,7 +195,28 @@ public class Model extends Observable implements IModel {
 		
 		
 		
-		return img ;
+		
+		}//}}
+	public Image getImage(int i){
+		System.out.println("image env");
+		System.out.println(sprite[0]);
+		return sprite[0].getImage();
 		
 	}
+	public int getX(int i){
+		System.out.println("x env");
+		return sprite[0].getX();
+		
+	}
+	public int getY(int i){
+		System.out.println("y env");
+		return sprite[0].getY();
+		
+	}
+	public void setX(int xp)
+	{
+		sprite[0].setX(xp);
+	}
+		
 }
+	

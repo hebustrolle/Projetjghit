@@ -34,5 +34,10 @@ public interface IModel {
 	Observable getObservable();
 	
 	String GetChar();
-	Image sld(int cpt) throws IOException;
+	void sld() throws IOException;
+	Image getImage(int i);
+	int getX(int i);
+	int getY(int i);
+
+	void setX(int i);
 }

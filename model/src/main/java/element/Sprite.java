@@ -10,7 +10,7 @@ package element;
 	public class Sprite extends StringWriter {
 		private Image image;
 
-		public Sprite(Image  image) {
+		public Sprite(String  image) {
 			
 			try {
 				this.image = ImageIO.read(new File("images/" + image));

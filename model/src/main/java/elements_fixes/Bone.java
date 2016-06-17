@@ -1,12 +1,11 @@
 package elements_fixes;
 
 import element.Permeability;
-import element.Sprite;
+import element.Sprite_bis;
 
 class Bone extends element_fixe {
 
 	public Bone() {
-		super(new Sprite("images/Bone.png"), Permeability.BLOCKING, 'c');
+		super(new Sprite_bis("images/Bone.png"), Permeability.BLOCKING, 'c');
 	}
-
 }

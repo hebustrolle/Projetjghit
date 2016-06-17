@@ -3,14 +3,14 @@ package elements_mobiles;
 import java.awt.Point;
 import element.Element;
 import element.Permeability;
-import element.Sprite;
+import element.Sprite_bis;
 
 public abstract class element_mobile extends Element {
 	private final Point position;
 	protected int x;
 	protected int y;
 
-	public element_mobile(Sprite sprite) {
+	public element_mobile(Sprite_bis sprite) {
 		super(sprite, Permeability.BLOCKING);
 		this.position = new Point();
 	}
